@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | JAIN SANSKAR AROHAN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --color-jain-primary: #1e4537;
+      --color-jain-secondary: #d1fae5;
+      --color-jain-highlight: #34d399;
+    }
+    .text-jain-primary { color: var(--color-jain-primary); }
+    .bg-jain-primary { background-color: var(--color-jain-primary); }
+    .bg-jain-secondary { background-color: var(--color-jain-secondary); }
+    .hover\:bg-jain-highlight:hover { background-color: var(--color-jain-highlight); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+  <!-- HEADER -->
+  <header class="bg-jain-primary text-white text-center py-8">
+    <h1 class="text-4xl font-bold mb-2">JAIN SANSKAR AROHAN</h1>
+    <p class="text-lg">Detailed Portions of All Classes</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-12 px-4 space-y-10">
+
+    <!-- BACK BUTTON -->
+    <div class="text-center mb-8">
+      <a href="index.html" class="inline-block bg-jain-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-jain-highlight transition">
+        ← Back to Home
+      </a>
+    </div>
+
+    <!-- CLASS 1 -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-jain-primary mb-4">Class 1</h2>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700">
+        <li>नमस्कार मंत्र – सार्थ प्रश्नोत्तर</li>
+        <li>गुरु वन्दन – सार्थ प्रश्नोत्तर</li>
+        <li>आलोचना सूत्र – सार्थ प्रश्नोत्तर</li>
+        <li>पंचनमसी बोल – 1 से 5 बोल</li>
+        <li>‘नहीं’ के 10 बोल</li>
+        <li>‘मूल’ के 8 बोल</li>
+        <li>भगवान महावीर की पूर्वार्ध जीवन गाथा</li>
+      </ul>
+    </section>
+
+    <!-- CLASS 2 -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-jain-primary mb-4">Class 2</h2>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700">
+        <li>नमस्कार मंत्र अर्थ</li>
+        <li>आलोचना सूत्र अर्थ</li>
+        <li>पंचनमसी बोल 6 से 10</li>
+        <li>संयम के 5 प्रकार</li>
+        <li>त्रिपदी</li>
+        <li>भगवान महावीर की उत्तरार्ध जीवन गाथा</li>
+      </ul>
+    </section>
+
+    <!-- CLASS 3 -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-jain-primary mb-4">Class 3</h2>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700">
+        <li>अणुव्रत</li>
+        <li>गुणव्रत</li>
+        <li>शिक्षाव्रत</li>
+        <li>तीर्थंकरों का जीवन</li>
+        <li>कर्म सिद्धांत</li>
+        <li>मित्र धर्म</li>
+      </ul>
+    </section>
+
+    <!-- CLASS 4 -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-jain-primary mb-4">Class 4</h2>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700">
+        <li>जीव-अजीव</li>
+        <li>अष्ट कर्म</li>
+        <li>पुण्य-पाप</li>
+        <li>अनेकांतवाद</li>
+        <li>सप्तभंगी न्याय</li>
+        <li>संयम मार्ग</li>
+      </ul>
+    </section>
+
+    <!-- CLASS 5 -->
+    <section class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-jain-primary mb-4">Class 5</h2>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700">
+        <li>महाव्रत</li>
+        <li>अपरिग्रह</li>
+        <li>सल्लेखना</li>
+        <li>मोक्ष मार्ग</li>
+        <li>शुद्धात्मा स्वरूप</li>
+        <li>ज्ञान के प्रकार</li>
+      </ul>
+    </section>
+
+    <!-- REGISTRATION SECTION -->
+    <div class="text-center mt-12">
+      <a href="https://forms.gle/gZQ21DsV6QemBX3m7" target="_blank"
+         class="bg-jain-primary text-white py-3 px-6 rounded-full text-lg font-semibold hover:bg-jain-highlight transition">
+        Register for JSA Classes
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-jain-primary text-white text-center p-8 mt-16">
+    <p><b>© <span id="year"></span> JAIN SANSKAR AROHAN.</b><br>
+    Inspired by Rajagurumata Umrao Kawarji Marasa Mahasati Mandal.<br>
+    Done By: Rajat Surana & Jiya Choradia.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
