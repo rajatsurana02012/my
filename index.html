@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JAIN SANSKAR AROHAN</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -15,143 +15,215 @@
     .bg-jain-primary { background-color: var(--color-jain-primary); }
     .bg-jain-secondary { background-color: var(--color-jain-secondary); }
     .hover\:bg-jain-highlight:hover { background-color: var(--color-jain-highlight); }
+    .border-jain-primary { border-color: var(--color-jain-primary); }
+
     html { scroll-behavior: smooth; }
-    .section-heading {
-      border-bottom: 2px solid var(--color-jain-secondary);
-      padding-bottom: 0.5rem;
+    .fixed-nav { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+
+    .collapsible-header { cursor: pointer; transition: background-color 0.3s ease; }
+    .collapsible-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+      border-top: 1px solid #E5E7EB;
     }
+    .collapsible-content.active { max-height: 1500px; }
+
+    .section-heading { border-bottom: 2px solid var(--color-jain-secondary); padding-bottom: 0.5rem; }
+
+    #home {
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReQxYo-y15U-r-M2Bd4zHNpQbFvN6qxCZK2g&s);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    #home::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+      z-index: 0;
+    }
+    #home > div { position: relative; z-index: 1; }
   </style>
 </head>
 <body class="font-sans text-gray-800">
 
-  <!-- NAVIGATION -->
-  <nav class="fixed bg-white w-full z-10 p-4 shadow-md">
+  <!-- Navigation Bar -->
+  <nav class="fixed-nav bg-white w-full z-10 p-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <a href="#home" class="flex items-center space-x-3">
         <img src="https://m.media-amazon.com/images/I/612vvIs882L.jpg" alt="JSA Logo" class="h-8 w-8 object-contain">
         <span class="text-2xl font-bold text-jain-primary">JAIN SANSKAR AROHAN</span>
       </a>
       <div class="space-x-6 hidden md:flex">
-        <a href="#home" class="hover:text-jain-primary">Home</a>
-        <a href="#about-us" class="hover:text-jain-primary">About Us</a>
-        <a href="#curriculum-reg" class="hover:text-jain-primary">Curriculum</a>
-        <a href="#photos" class="hover:text-jain-primary">Photos</a>
-        <a href="#contact" class="hover:text-jain-primary">Contact</a>
+        <a href="#home" class="text-gray-600 hover:text-jain-primary">Home</a>
+        <a href="#about-us" class="text-gray-600 hover:text-jain-primary">About Us</a>
+        <a href="#why-jsa" class="text-gray-600 hover:text-jain-primary">Why JSA</a>
+        <a href="#curriculum-reg" class="text-gray-600 hover:text-jain-primary">Curriculum</a>
+        <a href="#photos" class="text-gray-600 hover:text-jain-primary">Photos</a>
+        <a href="#results" class="text-gray-600 hover:text-jain-primary">Results</a>
+        <a href="#contact" class="text-gray-600 hover:text-jain-primary">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
-  <main class="pt-20">
+  <main class="pt-16">
 
     <!-- HOME -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-jain-secondary text-center px-4">
-      <div>
+    <section id="home" class="min-h-screen flex items-center justify-center text-center py-20 px-4">
+      <div class="max-w-4xl">
         <h1 class="text-5xl font-extrabold text-jain-primary mb-4">JAIN SANSKAR AROHAN</h1>
-        <p class="text-2xl text-gray-700 mb-6">Learning of Jain principles made simpler</p>
-        <a href="https://forms.gle/gZQ21DsV6QemBX3m7" target="_blank" class="bg-jain-primary text-white px-8 py-3 rounded-full text-lg hover:bg-jain-highlight transition">Register Now</a>
+        <p class="text-2xl text-gray-700 mb-8 font-medium">Learning of Jain principles made simpler</p>
+        <a href="https://forms.gle/gZQ21DsV6QemBX3m7" target="_blank" class="bg-jain-primary text-white py-3 px-10 rounded-full text-xl font-semibold hover:bg-jain-highlight transition duration-300">
+          Register Now
+        </a>
       </div>
     </section>
 
     <!-- ABOUT US -->
-    <section id="about-us" class="py-20 px-4 bg-white">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-jain-primary mb-10 section-heading">About Us</h2>
-        <p class="text-lg leading-relaxed max-w-3xl mx-auto text-gray-700">
-          Jain Sanskar Arohan (JSA) is a Spiritual Educational Program launched in 2017 to help seekers of all ages understand Jain concepts and philosophies in a structured way.
+    <section id="about-us" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-jain-primary mb-6 section-heading inline-block">About Us</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Jain Sanskar Arohan (JSA) is a Spiritual Educational Program launched in 2017 to help seekers of all ages understand Jain concepts/ philosophies, values and way of life. This structured course offers a unique opportunity to learn and grow spiritually.
+
         </p>
       </div>
     </section>
 
-    <!-- CURRICULUM (Only Class 1 + Button) -->
-    <section id="curriculum-reg" class="py-20 px-4 bg-jain-secondary">
+    <!-- WHY JSA -->
+    <section id="why-jsa" class="py-16 px-4 bg-white">
       <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-jain-primary mb-12 section-heading">Course Portions and Registration</h2>
+        <h2 class="text-4xl font-bold text-jain-primary mb-6 section-heading inline-block">Why Choose JSA?</h2>
+        <ul class="text-lg text-gray-700 leading-relaxed space-y-3 text-left max-w-3xl mx-auto list-disc pl-5">
+         <li>Deepen your Spiritual Understanding – A true need of the hour.</li>
+  <li>Discover how Jain principles foster peace, balance and holistic living.</li>
+  <li>Explore the connection between Science and Jain Philosophy.</li>
+  <li>Inculcate values of non-violence, compassion, and truthfulness in everyday life.</li>
+          10 Levels (Classes) covering essential topics of Jain philosophy & practice.
+          Open for Age 11+ and above.
+          Books provided for each level.
+          Weekly Online Classes conducted by learned scholars.
+          Annual Written Exams to reinforce learning.
+          Cash Rewards for Toppers!!
+        </ul>
+      </div>
+    </section>
 
-        <!-- Class 1 Details -->
-        <div class="bg-white p-8 rounded-lg shadow-lg text-left">
-          <h3 class="text-2xl font-bold text-jain-primary mb-4">Class 1: Portions & Registration</h3>
-          <ul class="list-disc pl-5 space-y-1 text-gray-700">
-            <li>नमस्कार मंत्र – सार्थ प्रश्नोत्तर</li>
-            <li>गुरु वन्दन – सार्थ प्रश्नोत्तर</li>
-            <li>आलोचना सूत्र – सार्थ प्रश्नोत्तर</li>
-            <li>पंचनमसी बोल – 1 से 5 बोल</li>
-            <li>‘नहीं’ के 10 बोल</li>
-            <li>‘मूल’ के 8 बोल</li>
-            <li>भगवान महावीर की पूर्वार्ध जीवन गाथा</li>
-          </ul>
+    <!-- COURSE PORTIONS -->
+    <section id="curriculum-reg" class="py-20 px-4 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-jain-primary mb-12 section-heading">Course Portions and Registration</h2>
 
-          <div class="mt-6 space-y-3 pt-3 border-t">
-            <a href="https://forms.gle/gZQ21DsV6QemBX3m7" target="_blank"
-               class="block text-center bg-jain-primary text-white py-2 rounded-lg font-semibold hover:bg-jain-highlight">
-              REGISTER FOR CLASS 1
-            </a>
-            <a href="#" target="_blank" class="flex items-center justify-center bg-gray-500 text-white py-2 rounded-lg font-semibold hover:bg-gray-600 space-x-2">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="h-5 w-5">
-              <span>JOIN WHATSAPP GROUP</span>
+        <div class="space-y-6 max-w-4xl mx-auto">
+
+          <!-- CLASS 1 (Expanded by Default) -->
+          <div class="border border-jain-secondary rounded-lg shadow-md">
+            <div class="collapsible-header bg-jain-secondary p-5 rounded-t-lg flex justify-between items-center text-xl font-semibold text-jain-primary">
+              <span>Class 1: Portions & Registration</span>
+              <span class="arrow text-2xl">–</span>
+            </div>
+            <div class="collapsible-content active p-5 text-gray-700 bg-white">
+              <ul class="space-y-1 pl-5 list-disc text-base">
+             <li>नमस्कार मंत्र – सार्थ प्रश्नोत्तर</li>
+             <li>गुरु वन्दन (तिव्रुत्तो का पाठ) – सार्थ प्रश्नोत्तर</li>
+             <li>आलोचना सूत्र (इच्छाकारणों का पाठ) – सार्थ प्रश्नोत्तर</li>
+             <li>पंचनमसी बोल – 1 से 5 बोल</li>
+             <li>‘नहीं’ के 10 बोल</li>
+             <li>‘मूल’ के 8 बोल</li>
+             <li>हे प्रभो! आनंददाता</li>
+             <li>जय बोलो महावीर स्वामी की</li>
+             <li>बारह व्रत (पद्यमें)</li>
+             <li>सामान्य प्रश्नोत्तर</li>
+              <li>तीर्थंकर परिचय</li>
+  <li>गणधर परिचय</li>
+  <li>श्रावक के तीन मनोरथ</li>
+  <li>जैन ध्वज सम्यक कुप्यसन</li>
+  <li>भगवान महावीर की पूर्वार्ध जीवन गाथा</li>
+  <li>भगवान पार्श्वनाथ की करुणा</li>
+  <li>अमर कुमार की श्रद्धा</li>
+ 
+              </ul>
+
+              <div class="mt-6 space-y-3 pt-3 border-t">
+                <a href="https://forms.gle/gZQ21DsV6QemBX3m7" target="_blank"
+                   class="block text-center bg-jain-primary text-white py-2 rounded-lg font-semibold hover:bg-jain-highlight">
+                  REGISTER FOR CLASS 1
+                </a>
+                <a href="#" target="_blank"
+                   class="flex justify-center items-center gap-2 bg-gray-500 text-white py-2 rounded-lg font-semibold hover:bg-gray-600">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="h-6 w-6" alt="WhatsApp">
+                  link of whatsapp - 1
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button for More Details -->
+          <div class="text-center mt-4">
+            <a href="portions.html" class="inline-block bg-jain-primary text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-jain-highlight">
+              Click here for more details
             </a>
           </div>
-        </div>
 
-        <div class="mt-10">
-          <a href="courses.html" class="inline-block bg-jain-primary text-white py-3 px-6 rounded-full text-lg hover:bg-jain-highlight transition">
-            Click here for more details
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- PHOTOS SECTION -->
-    <section id="photos" class="py-20 px-4 bg-white">
+    <!-- PHOTOS -->
+    <section id="photos" class="py-16 px-4 bg-white">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-jain-primary mb-10 section-heading">Photos</h2>
-        <p class="text-lg text-gray-700 mb-12">Here are some of our beautiful memories and events.</p>
-
-        <!-- Photo Gallery Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <!-- Example photos (replace later with your own) -->
-          <div class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
-            <img src="photos/sample1.jpg" alt="Event 1" class="w-full h-64 object-cover">
-          </div>
-          <div class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
-            <img src="photos/sample2.jpg" alt="Event 2" class="w-full h-64 object-cover">
-          </div>
-          <div class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
-            <img src="photos/sample3.jpg" alt="Event 3" class="w-full h-64 object-cover">
-          </div>
-          <div class="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
-            <img src="photos/sample4.jpg" alt="Event 4" class="w-full h-64 object-cover">
-          </div>
+        <h2 class="text-4xl font-bold text-jain-primary mb-10 section-heading inline-block">Photos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <img src="">
+          <img src="https://via.placeholder.com/400x300?text=JSA+Event+2" class="rounded-lg shadow-md hover:scale-105 transition duration-300" alt="JSA Event 2">
+          <img src="https://via.placeholder.com/400x300?text=JSA+Classroom" class="rounded-lg shadow-md hover:scale-105 transition duration-300" alt="JSA Classroom">
         </div>
+      </div>
+    </section>
 
-        <p class="mt-10 text-gray-600 italic text-sm">(*More photos coming soon — stay tuned!*)</p>
+    <!-- RESULTS -->
+    <section id="results" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-jain-primary mb-6 section-heading inline-block">Results</h2>
+        <p class="text-lg text-gray-700">
+          CLICK THE LINK TO VIEW RESULTS
+        </p>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="py-20 px-4 bg-white">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-jain-primary mb-10 section-heading">Contact Us</h2>
-        <p class="text-lg text-gray-700 mb-6">Email: rajatsurana2012@gmail.com</p>
-        <p class="text-lg text-gray-700">
-          Phone: Surendra Mehta (+91-98410-52201) <br>
-          Sunitha Chordia (+91-95660-82119) <br>
-          Manjula Mehta (+91-98416-02255)
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-jain-primary mb-6 section-heading inline-block">Contact Us</h2>
+        <p class="text-lg text-gray-700 mb-6">
+          For any queries or assistance, reach out to us through email or WhatsApp.
         </p>
+        <div class="space-y-3">
+          <p><strong>Email:</strong> jainsanskararohan@gmail.com</p>
+          <p><strong>Phone:</strong> - Surendra Mehta:+91-98410-52201<br>- Sunitha Chordia:+91-95660-82119<br>- Manjula Mehta:+91-98416-02255</p>
+          <a href="#" class="inline-flex items-center gap-2 bg-jain-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-jain-highlight">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="h-6 w-6" alt="WhatsApp"> WhatsApp Us
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-jain-primary text-white text-center p-8">
-    <p><b>© <span id="year"></span> JAIN SANSKAR AROHAN.</b><br>
-    Inspired by Rajagurumata Umrao Kawarji Marasa Mahasati Mandal.<br>
-    Done By: Rajat Surana & Jiya Choradia.</p>
+  <footer class="bg-jain-primary text-white p-8 text-center">
+    <p class="text-sm">
+      <b>© <span id="year"></span> JAIN SANSKAR AROHAN.<br>
+      Inspired by Rajagurumata Umrao Kawarji Marasa Mahasati Mandal.<br>
+      Done by: Rajat Surana & Jiya Choradia.</b>
+    </p>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
+
